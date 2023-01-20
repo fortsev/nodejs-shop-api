@@ -46,11 +46,6 @@ class UserController {
     async auth(req, res, next) {
         const token = generateJwt(req.user.id, req.user.email, req.user.role)
         return res.json({token})
-        // const {id} = req.query;
-        // if (!id) {
-        //     return next(ApiError.badRequest('Не задан ID'))
-        // }
-        // res.json(id);
     }
 }
 
